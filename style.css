@@ -1,0 +1,19 @@
+body{background-color: black;}
+.content{margin-top: 2rem; border-radius: 25px;}
+h1,h3,h4,h6,h5,li {color: rgb(255, 255, 255);}
+.card{ background-color:  #100f0f; 
+            border: none; 
+            box-shadow: none;}
+
+   html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+.btn{background-color: #171515; border-color: #171515; border-radius: 25px;}
+  main {
+      flex: 1; /* Isi utama agar mendorong footer ke bawah */
+    }
+
