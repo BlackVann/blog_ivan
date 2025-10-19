@@ -16,4 +16,5 @@ h1,h3,h4,h6,h5,li {color: rgb(255, 255, 255);}
   main {
       flex: 1; /* Isi utama agar mendorong footer ke bawah */
     }
+  a{color: white; text-decoration: none;}
 
