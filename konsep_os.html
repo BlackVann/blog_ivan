@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <main>
+              <div class="container" >
+    <div class="content justify-content-center p-4 " style="background-color: #171515;">
+        <div class="header">
+            <h3>Sistem Operasi</h3>
+        </div>
+
+        <div class="body" style="margin-top: 2rem;">
+            <h5>Nama : Ivan Christian</h5>
+            <h5>NIM  : 8020240023</h5>
+            <h5>Tugas 2</h5>
+        </div>
+
+    </div>
+ <div class="content" style="margin-top: 2rem; background-color: #171515; padding: 1rem; margin-bottom: 2rem;">
+
+    <h3 style="text-align: center; margin-bottom: 2rem;">Proses Di Sistem Operasi</h3>
+
+
+        <p>
+
+        <h6><b>Batch System</b></h6>  
+        <p style="margin-bottom: 0;">
+         Batch system adalah menjalankan pekerjaan perangkat lunak secara otomatis dan tanpa pengawasan. Pengguna menjadwalkan pekerjaan eperti pencadangan, pemfilteran, dan pengurutan dapat menjadi komputasi yang intensif dan tidak efisien untuk dijalankan pada transaksi data individual. Biasanya, pekerjaan dijadwalkan untuk dijalankan pada waktu yang telah ditentukan , saat suatu peristiwa terjadi seperti penghujung hari atau semalam, atau saat sumber daya komputer tersedia.
+         Beberapa contoh sistem operasi pemrosesan batch meliputi:   </p>
+        <ul >
+            <li>z/OS milik IBM</li>
+            <li>Unisys MCP</li>
+            <li>Burroughs MCP/BCS</li>
+        </ul>
+ 
+        <p style="margin-bottom: 0;">
+         Sistem proses batch tersebut digunakan untuk memproses berbagai jenis data dan permintaan. Beberapa jenis pekerjaan pemrosesan batch yang paling umum meliputi:   </p>
+         <ul>
+            <li>Penagihan mingguan/bulanan</li> 
+            <li>Penggajian</li>
+            <li>Pemrosesan inventaris</li>
+            <li>Pembuatan laporan</li>
+            <li>Konversi data</li>
+            <li>Siklus berlangganan</li>
+            <li>Pemenuhan rantai pasokan</li>
+        </ul>
+     
+<p></p>
+
+
+     <h6><b>Critical Section</b></h6>   
+     <p style="margin-bottom: 0;">Critical section adalah bagian penting dalam program yang tidak boleh dijalankan oleh dua orang (proses) sekaligus, karena bagian itu mengubah data yang sama.Biasanya, critical section mengakses sumber daya bersama, seperti struktur data , perangkat periferal, atau koneksi jaringan, yang tidak akan beroperasi dengan benar dalam konteks beberapa akses konkuren
+   Berikut ini adalah beberapa contoh sistem dan library yang digunakan untuk mengatur 
+critical section di berbagai bahasa pemrograman dan sistem operasi. 
+Setiap sistem menyediakan mekanisme sinkronisasi berbeda untuk memastikan 
+bahwa hanya satu proses atau thread yang dapat mengakses bagian critical pada satu waktu.
+</p><ul>
+  <li>windows.h milik Windows API</li>
+  <li>pthread.h milik POSIX (Linux/UNIX)</li>
+  <li>java.util.concurrent milik Java</li>
+  <li>threading milik Python</li>
+  <li>System.Threading milik C# / .NET</li>
+  <li>sync milik Golang</b></li>
+  <li>std::sync milik Rust</li>
+</ul>
+<p></p>
+        <p style="margin-bottom: 0;">Critical section memiliki beberapa bagian meliputi: </p>   
+     <ul>
+            <li><b>Bagian Entri (Entry Section)</b>
+                <br>Proses meminta izin sebelum masuk ke critical section. Biasanya menggunakan alat sinkronisasi seperti mutex atau semaphore.
+            </li>
+            <li><b>Critical section (Critical Section)</b>
+                <br>(Critical Section)
+Bagian kode yang mengakses atau mengubah data bersama. Hanya satu proses boleh di sini dalam satu waktu.
+            </li>
+            <li><b>Bagian Keluar (Exit Section)</b>
+                <br>Setelah selesai, proses melepaskan izin (unlock / release semaphore) agar proses lain bisa masuk.
+            </li>
+            <li><b>Bagian Sisa (Remainder Section)</b>
+                <br>Bagian kode lain yang tidak berhubungan dengan sumber daya bersama, yang bisa dijalankan bebas.
+            </li>
+        </ul>
+        <p></p>
+    <p style="margin-bottom: 0;">Contoh critical section dalam Aplikasi Dunia Nyata</p>
+    <ul>
+  <li>
+    <b>Sistem Perbankan (ATM atau Online Banking)</b>
+    <ul>
+      <li>Critical section:Memperbarui saldo akun selama penyetoran atau penarikan.</li>
+      <li>Masalah jika tidak ditangani: Dua penarikan bersamaan dapat mengakibatkan saldo akhir yang salah karena kondisi balapan.</li>
+    </ul>
+  </li>
+
+  <li>
+    <b>Sistem Pemesanan Tiket (Maskapai Penerbangan, Film, Kereta Api)</b>
+    <ul>
+      <li>Critical section: Memesan kursi terakhir yang tersedia.</li>
+      <li>Masalah jika tidak ditangani: Dua pengguna mungkin diperlihatkan kursi yang sama dan keduanya memesannya, menyebabkan pemesanan berlebih.</li>
+    </ul>
+  </li>
+
+  <li>
+    <b>Print Spooler di Printer Jaringan</b>
+    <ul>
+      <li>Critical section: Mengirim pekerjaan cetak ke antrean printer.</li>
+      <li>Masalah jika tidak ditangani: Pekerjaan cetak dapat tercampur atau terlewati jika beberapa pengguna mengirim pekerjaan secara bersamaan.</li>
+    </ul>
+  </li>
+
+  <li>
+    <b>Pengeditan File dalam Dokumen Bersama</b> (misalnya, Google Docs, MS Word dengan akses bersama)
+    <ul>
+      <li>Critical section: Menyimpan atau menulis ke dokumen bersama.</li>
+      <li>Masalah jika tidak ditangani: Pengeditan yang dilakukan secara bersamaan dapat menyebabkan versi yang saling bertentangan atau hilangnya data.</li>
+    </ul>
+  </li>
+</ul>
+
+  <p></p>
+
+    <h6><b>Process Control Block </b></h6>
+    <p>Process Control Block (PCB), atau disebut juga deskriptor proses, adalah struktur data yang digunakan oleh sistem operasi untuk menyimpan semua informasi mengenai suatu proses. Ketika sebuah proses dibuat atau dijalankan, sistem operasi akan membentuk PCB yang berisi data seperti identitas proses, status proses (baru, siap, berjalan, menunggu, atau dihentikan), lokasi memori, serta informasi CPU terakhir. PCB ini berperan penting dalam pelacakan proses dan peralihan konteks, karena memungkinkan sistem untuk menghentikan sementara satu proses dan melanjutkan proses lainnya tanpa kehilangan data. Kernel sistem operasi menyimpan seluruh PCB dalam tabel proses, yang mencatat semua proses aktif di dalam sistem.  </p>
+
+<p>Hampir semua sistem operasi modern saat ini telah memiliki Process Control Block, meskipun struktur dan detail isinya berbeda-beda pada setiap sistem operasi. Perbedaan inilah yang membuat PCB memiliki sifat unik di setiap sistem, namun tetap memiliki tujuan utama yang sama — yaitu mengelola dan mengawasi jalannya proses secara efisien di dalam komputer.</p>
+<p>Contoh Tabel Proses</p>
+<table>
+<thead>
+<tr>
+<th>PID</th>
+<th>Nama Proses</th>
+<th>Status</th>
+<th>Memory (VmRSS)</th>
+<th>CPU Time</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="mono">101</td>
+<td>systemd</td>
+<td><span class="badge">Running</span></td>
+<td class="mono">200 MB</td>
+<td class="mono">1.2 s</td>
+
+</tr>
+
+
+<tr>
+<td class="mono">1256</td>
+<td>firefox</td>
+<td><span class="badge">Sleeping</span></td>
+<td class="mono">253 MB</td>
+<td class="mono">300 ms</td>
+
+</tr>
+
+
+<tr>
+<td class="mono">1337</td>
+<td>code</td>
+<td><span class="badge">Running</span></td>
+<td class="mono">400 MB</td>
+<td class="mono">2.0 s</td>
+
+</tr>
+
+
+<tr>
+<td class="mono">1500</td>
+<td>terminal</td>
+<td><span class="badge">Waiting</span></td>
+<td class="mono">80 MB</td>
+<td class="mono">100 ms</td>
+
+</tr>
+
+
+<tr>
+<td class="mono">2001</td>
+<td>VideoPlayer</td>
+<td><span class="badge">Stopped</span></td>
+<td class="mono">120 MB</td>
+<td class="mono">150 ms</td>
+
+</tr>
+
+
+</tbody>
+
+</table> 
+<p></p>
+<p>Contoh Isi Process Control Block</p>
+ <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+        <th>Keterangan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Field">Name</td>
+        <td class="mono" data-label="Value">firefox</td>
+        <td class="small" data-label="Keterangan">Nama program / proses.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">State</td>
+        <td class="mono" data-label="Value">S (sleeping)</td>
+        <td class="small" data-label="Keterangan">Status proses (Running, Sleeping, Waiting, dll).</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">Tgid</td>
+        <td class="mono" data-label="Value">1256</td>
+        <td class="small" data-label="Keterangan">Thread group id (biasanya sama dengan PID utama).</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">Pid</td>
+        <td class="mono" data-label="Value">1256</td>
+        <td class="small" data-label="Keterangan">Process ID (PID) — identitas unik proses.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">PPid</td>
+        <td class="mono" data-label="Value">1200</td>
+        <td class="small" data-label="Keterangan">Parent PID — ID proses induk.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">Uid</td>
+        <td class="mono" data-label="Value">1000 1000 1000 1000</td>
+        <td class="small" data-label="Keterangan">User ID dari pemilik proses (real, effective, saved, fs).</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">Gid</td>
+        <td class="mono" data-label="Value">1000 1000 1000 1000</td>
+        <td class="small" data-label="Keterangan">Group ID (sesuai urutan seperti Uid).</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">Threads</td>
+        <td class="mono" data-label="Value">12</td>
+        <td class="small" data-label="Keterangan">Jumlah thread yang dimiliki proses ini.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">VmSize</td>
+        <td class="mono" data-label="Value">2100348 kB</td>
+        <td class="small" data-label="Keterangan">Total ukuran memori virtual yang dialokasikan.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">VmRSS</td>
+        <td class="mono" data-label="Value">253892 kB</td>
+        <td class="small" data-label="Keterangan">Resident Set Size — memori fisik (RAM) yang sedang dipakai.</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">voluntary_ctxt_switches</td>
+        <td class="mono" data-label="Value">342</td>
+        <td class="small" data-label="Keterangan">Beralih konteks sukarela (proses menyerahkan CPU sendiri).</td>
+      </tr>
+
+      <tr>
+        <td data-label="Field">nonvoluntary_ctxt_switches</td>
+        <td class="mono" data-label="Value">18</td>
+        <td class="small" data-label="Keterangan">Beralih konteks tidak sukarela (dipaksa oleh scheduler).</td>
+      </tr>
+    </tbody>
+  </table> 
+  <p></p>
+
+<h6><b>Distributed Processing</b></h6>
+  <p>Distributed processing adalah proses mengambil tugas komputasi yang kompleks dan membaginya ke dalam beberapa bagian yang lebih kecil, lalu mendistribusikannya ke sejumlah mesin (node) dalam jaringan.
+Setiap node memproses bagiannya masing-masing, kemudian hasilnya dikirim kembali ke sistem pusat untuk dikompilasi menjadi satu keluaran yang utuh dan mulus.</p>
+  <p>Pendekatan ini memungkinkan sistem untuk menyelesaikan tugas dengan lebih cepat dan efisien dibandingkan jika semua proses dijalankan hanya pada satu komputer tunggal. Selain itu, distributed processing juga meningkatkan keandalan (reliability) dan skalabilitas (scalability), karena jika satu node mengalami kegagalan, node lain masih dapat melanjutkan pekerjaan tanpa menghentikan seluruh sistem. Setiap node bertanggung jawab untuk memproses bagian tugasnya sendiri secara paralel dan mandiri, menggunakan sumber daya komputasinya masing-masing. Setelah semua node menyelesaikan bagian yang menjadi tanggung jawabnya, hasil dari setiap node dikirim kembali ke sistem pusat atau pengendali utama untuk digabungkan (dikompilasi) menjadi satu keluaran yang utuh, konsisten, dan mulus.</p>
+<p>Contoh Penerapan Distributed Processing</p>
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr >
+      <th>No</th>
+      <th>Kasus</th>
+      <th>Penjelasan Singkat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Google Search</td>
+      <td>Ribuan server di seluruh dunia bekerja bersama untuk memproses dan menampilkan hasil pencarian dalam hitungan detik.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Netflix / YouTube</td>
+      <td>Video disimpan di banyak server (node) di berbagai negara agar pengguna bisa menonton dari server terdekat tanpa buffering.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Perbankan Online</td>
+      <td>Transaksi nasabah dibagi ke beberapa server agar tetap cepat dan tidak overload.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>E-commerce (Shopee, Tokopedia)</td>
+      <td>Setiap server menangani wilayah atau fungsi berbeda seperti produk, pembayaran, dan pengiriman.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Ilmiah / Riset Cuaca</td>
+      <td>Data cuaca global dibagi ke komputer di berbagai negara untuk mempercepat analisis.</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+
+
+
+  <h6><b>Handheld</b></h6>
+  <p>Disebut juga HPC , PC Genggam (komputer pribadi), atau komputer genggam , adalah perangkat komputer yang dapat dipegang di telapak tangan. Komputer ini umumnya menyimpan nomor telepon, tugas, dan data lain yang umum dibutuhkan saat jauh dari rumah atau kantor. Contoh handheld dan sistem operasinya sebagai berikut:</p>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Sistem Operasi</th>
+      <th>Perangkat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Android</td>
+      <td>Samsung Galaxy, Oppo, Vivo, Xiaomi, Realme</td>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>iPhone, iPad</td>
+    </tr>
+    <tr>
+      <td>Windows</td>
+      <td>Surface Go, PDA industri, handheld PC lama</td>
+    </tr>
+    <tr>
+      <td>HarmonyOS</td>
+      <td>Huawei MatePad, Huawei P Series, Honor Magic</td>
+    </tr>
+    <tr>
+      <td>Linux</td>
+      <td>Steam Deck, PinePhone, Librem 5</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<h6><b>Thread</b></h6>
+<p style="margin-bottom: 0;">Thread adalah unit-unit kecil program komputer yang dapat berjalan secara independen. Thread memungkinkan program untuk menjalankan beberapa tugas secara bersamaan, misalnya menjalankan beberapa bagian program secara bersamaan. Hal ini membuat program lebih efisien dan responsif, terutama untuk tugas-tugas yang dapat dibagi menjadi bagian-bagian yang lebih kecil. Ada dua jenis utama thread, yaitu User Level Thread dan Kernel Level Thread</p>
+    <ul style="margin-bottom: 0;">
+        <li>
+            <b>User Level Thread :</b> Thread yang dikelola sepenuhnya oleh program (di level pengguna), bukan oleh sistem. Contohnya thread pada bahasa Java atau POSIX Thread (pthreads).
+        </li>
+                <li>
+            <b>Kernel Level Thread :</b> Thread yang dikelola langsung oleh sistem operasi (kernel). Contohnya thread di sistem Windows, Linux, atau macOS modern.
+        </li>
+    </ul>
+<p style="margin-bottom: 0;">Secara umum thread memiliki 2 cara kerja yaitu :</p>
+<ul>
+    <li><b>Single Thread</b> : semua tugas dijalankan secara berurutan, satu per satu. Cocok untuk program sederhana seperti kalkulator atau program konsol.</li>
+    <li><b>Multi Thread</b> : tugas bisa berjalan secara bersamaan (paralel). Cocok untuk aplikasi besar seperti browser, game, atau server web. </li>
+</ul>
+
+<h3>Sumber:</h3>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Batch_processing" target="_blank">Wikipedia – Batch processing</a></li>
+  <li><a href="https://aws.amazon.com/id/what-is/batch-processing/" target="_blank">AWS – What is batch processing?</a></li>
+  <li><a href="https://www.geeksforgeeks.org/operating-systems/batch-processing-operating-system/" target="_blank">GeeksforGeeks – Batch processing operating system</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Critical_section" target="_blank">Wikipedia – Critical section</a></li>
+  <li><a href="https://www.geeksforgeeks.org/operating-systems/critical-section-in-synchronization/" target="_blank">GeeksforGeeks – Critical section in synchronization</a></li>
+   <li><a href="https://www.geeksforgeeks.org/operating-systems/threads-and-its-types-in-operating-system/" target="_blank">GeeksforGeeks – Threads and its types in Operating System</a></li>
+  <li><a href="https://www.nesabamedia.com/process-control-block/" target="_blank">NesabaMedia – Process Control Block</a></li>
+  <li><a href="https://www.tutorialspoint.com/single-threaded-and-multi-threaded-processes" target="_blank">TutorialsPoint – Single Threaded and Multi Threaded Processes</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Process_control_block" target="_blank">Wikipedia – Process control block</a></li>
+  <li><a href="https://www.computerhope.com/jargon/h/handheld.htm" target="_blank">ComputerHope – Handheld</a></li>
+  <li><a href="https://aws.amazon.com/what-is/distributed-computing/" target="_blank">AWS – What is distributed computing?</a></li>
+  <li><a href="https://www.geeksforgeeks.org/operating-systems/process-management-in-distributed-system/" target="_blank">GeeksforGeeks – Process management in distributed system</a></li>
+  <li><a href="https://www.geeksforgeeks.org/operating-systems/critical-section-in-synchronization/" target="_blank">GeeksforGeeks – Critical section in synchronization</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Critical_section" target="_blank">Wikipedia – Critical section</a></li>
+  <li><a href="https://chat.openai.com/" target="_blank">ChatGPT – OpenAI (versi GPT-5)</a></li>
+</ul>
+
+
+
+
+ </div> 
+
+</div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<footer style="text-align:center; padding:10px; background-color:#222; color:white;">
+  &copy; <span id="year"></span> Ivan Christian. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  </body>
+</html>
