@@ -29,5 +29,66 @@ th, td { padding:10px 12px; text-align:left; border-bottom:1px solid #eee; font-
 .container { max-width:1100px; margin:0 auto; }
 .caption { caption-side:top; text-align:left; padding-bottom:8px; font-weight:600; }
 p,td,th{color: white;}
+select {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #333;
+  width: 220px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  cursor: pointer;
+  width: 250px;      
+  height: 45px;       
+  font-size: 18px;    
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+   border-radius: 12px;
+   
+}
+
+/* Hover dan focus */
+select:hover,.btnjs:hover {
+  border-color: #28a745;
+}
+select:focus,.btnjs:hover {
+  outline: none;
+  box-shadow: 0 0 5px #28a745;
+}
+
+option {
+   font-size: 1rem;
+
+  background-color: #171515; 
+  color: #ffffff;           
+ 
+  
+}
+
+
+option:hover {
+  background-color: #d6eaff; }
+
+
+.btnjs{
+  width: 250px;       
+  height: 45px;       
+  font-size: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 
 
